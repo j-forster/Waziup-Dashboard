@@ -3,7 +3,9 @@
 This is a dashboard for the IoT and big data platfrom [Waziup.io](http://www.waziup.io/).
 Graphical interfaces and easy-to-use components will help you create your own IoT structure.
 
-![Waziup Dashboard](https://raw.githubusercontent.com/j-forster/Waziup-Dashboard/master/asset/dashboard.png)
+[▶ The new dashboard is now hosted on GitHub.](https://j-forster.github.io/Waziup-Dashboard/www/index.html)
+
+[![Waziup Dashboard](https://raw.githubusercontent.com/j-forster/Waziup-Dashboard/master/asset/dashboard.png)](https://j-forster.github.io/Waziup-Dashboard/www/index.html)
 
 
 ## Entities
