@@ -16,7 +16,7 @@ const _issue148ViewTemplate = `
 `;
 
 
-ViewLoader.loadStylesheet("view/_issue148/issue148.css");
+ViewLoader.loadStylesheet("view/issue148/issue148.css");
 
 class _issue148View extends View {
   
