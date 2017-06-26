@@ -1,0 +1,32 @@
+.about-view {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px;
+  overflow: auto;
+  
+  h1 {
+    margin: 20px 0;
+    font-size: 40px;
+  }
+  
+  h2 {
+    margin: 20px 0;
+    font-size: 30px;
+  }
+  
+  ul {
+    font-size: 16px;
+  }
+  
+  hr {
+    height: 1px;
+    background: #dadada;
+    border: none;
+  }
+  
+  img {
+    height: 24px;
+    vertical-align: bottom;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+ 
+<html lang="de">
+<head>
+  <title>Hitchhiker Test-Put</title>
+  <meta charset="utf-8">
+  <style>
+    input,
+    textarea {
+      width: 600px;
+      margin-bottom: 10px;
+    }
+    
+    textarea {
+      height: 300px;
+    }
+    
+    button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    URL<br>
+    <input type="text" id="url">
+  </div>
+  <div>
+    Authorization<br>
+    <input type="text" id="username" style="width: 200px">
+    <input type="password" id="password" style="width: 200px">
+  </div>
+  <div>
+    POST Data<br>
+    <textarea id="data">
+{
+  "id": "MySensor2",
+  "type": "SensingDevice",
+  "temperature": {
+    "value": 25,
+    "type": "degree celsius",
+    "history": 4
+  },
+  "location": {
+    "value": "51.035646, 13.736323",
+    "type": "geo",
+    "history": 10
+  }
+}
+    </textarea>
+  </div>
+  <button id="connect">Connect</button> <button id="submit" disabled>Submit</button> <button id="close" disabled>Close</button>
+  <div>
+    Output<br>
+    <textarea id="output" disabled></textarea>
+  </div>
+  
+  <script>
+    var $ = document.querySelector.bind(document);
+    
+    var port = 8081;
+    var host = location.protocol.replace("http", "ws") + "//" + location.host + ":" + port;
+    var path = "/entities";
+    
+    var ws;
+
+    $("#url").value = host+path;
+    
+    $("#connect").addEventListener("click", () => {
+      
+      var username = $("#username").value;
+      var password = $("#password").value;
+      
+      document.cookie = "authorization=Basic "+btoa(username+":"+password);
+      
+      ws = new WebSocket($("#url").value)
+      $("#output").value = "";
+      
+      ws.onopen = () => {
+        
+        $("#close").removeAttribute("disabled");
+        $("#submit").removeAttribute("disabled");
+        $("#connect").setAttribute("disabled", "disabled");
+        
+        $("#output").value += "(connected)\n";        
+      }
+      
+      ws.onclose = () => {
+        
+        $("#close").setAttribute("disabled", "disabled");
+        $("#submit").setAttribute("disabled", "disabled");
+        $("#connect").removeAttribute("disabled");
+        
+        $("#output").value += "(closed)\n";        
+      }
+      
+      ws.onmessage = (msg) => {
+        
+        try {
+          
+          var obj = JSON.parse(msg.data);
+          $("#output").value += JSON.stringify(obj, null, 2)+"\n";        
+        } catch(err) {
+          console.warn(msg);
+          $("#output").value += "(error no json / see console!)\n";  
+        }
+      }
+      
+      ws.onerror = (err) => {
+        
+        console.error(err);
+        $("#output").value += "(error / see console!)\n";       
+      }
+    });
+    
+    
+    $("#submit").addEventListener("click", () => {
+      
+      var msg = $("#data").value;
+      try {
+        JSON.parse(msg);
+      } catch(err) {
+        
+        alert("No valid JSON string!");
+        return;
+      }
+      
+      ws.send(msg);
+    });
+    
+    
+    $("#close").addEventListener("click", () => {
+      
+      ws.close();
+    });
+    
+  </script>
+</body>
+</html>

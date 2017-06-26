@@ -1,0 +1,27 @@
+{
+  "author": {
+    "name": "Johann Forster",
+    "email": "johann@forster.family",
+    "url": "http://forster.family"
+  },
+  "name": "hi-dashboard",
+  "description": "A Waziup.io Dashboard",
+  "version": "1.00.0",
+  "main": "lib/dashboard.js",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "dependencies": {
+    "express": "4.15.2"
+  },
+  "maintainers": [
+    {
+      "name": "Johann Forster",
+      "email": "johann@forster.family"
+    }
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/npm/npm.git"
+  }
+}

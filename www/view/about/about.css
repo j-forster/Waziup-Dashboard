@@ -1,0 +1,29 @@
+/* line 1, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+.about-view {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px;
+  overflow: auto; }
+  /* line 8, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+  .about-view h1 {
+    margin: 20px 0;
+    font-size: 40px; }
+  /* line 13, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+  .about-view h2 {
+    margin: 20px 0;
+    font-size: 30px; }
+  /* line 18, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+  .about-view ul {
+    font-size: 16px; }
+  /* line 22, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+  .about-view hr {
+    height: 1px;
+    background: #dadada;
+    border: none; }
+  /* line 28, N:/HTW Dresden/ProjSS17/dashboard/www/view/about/about.scss */
+  .about-view img {
+    height: 24px;
+    vertical-align: bottom; }
+
+/*# sourceMappingURL=about.css.map */

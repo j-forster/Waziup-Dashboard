@@ -1,0 +1,460 @@
+.entities-view {
+  
+  display: flex;
+  flex-direction: column;
+  
+  .remove-message {   
+    white-space: nowrap;
+    height: 26px;
+    line-height: 26px;
+    box-sizing: content-box;
+    padding: 0 1em;
+    background: #ffd7d7;
+    color: #8a2b2b;
+    vertical-align: middle;
+    
+    button {
+      border: none;
+      height: 26px;
+      font: inherit;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  
+  .do-remove {
+    background: #ffa5a5;
+    color: #581e1e;
+
+    &:hover {
+      background: #e68686;
+      color: #581e1e;
+    }
+  }
+  
+  .cancel-remove {
+    background: inherit;
+    color: inherit;
+    float: right;
+
+    &:hover {
+      background: #ffa5a5;
+      color: #581e1e;
+    }
+  }
+}
+
+.entities-list {
+  
+  &.selecting {
+    
+    .head {
+      display: block;
+    }
+  }
+  
+  .head {
+    display: none;
+    white-space: nowrap;
+    height: 26px;
+    line-height: 26px;
+    box-sizing: content-box;
+    padding: 0 1em;
+    background: #dbdbdb;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+  
+  &[data-select="remove"] .head {
+    background: #ffd7d7;
+    color: #8a2b2b;
+
+    [name='select'] {
+      background: #ff9797;
+      color: #601e1e;
+
+      &:hover {
+        background: #fd5050;
+        color: #333;
+      }
+    }
+  }
+  
+  button {
+    border: none;
+    height: 26px;
+    font: inherit;
+    outline: none;
+    cursor: pointer;
+  }
+
+  [name='select'] {
+    background: #d9e3e8;
+    color: #333;
+
+    &:hover {
+      background: #9eb3be;
+      color: #222;
+    }
+  }
+
+  [name='cancel'] {
+    background: inherit;
+    color: inherit;
+    float: right;
+
+    &:hover {
+      background: #d9e3e8;
+      color: #333;
+    }
+  }
+  
+  td:nth-child(1) {
+    padding-left: .7em;
+    padding-right: .7em;
+    background: #f1f1f1;
+    width: 0%;
+    text-align: right;
+    color: #9e9e9e;
+    font-size: 10px;
+    vertical-align: sub;
+  }
+  
+  td:nth-child(2) {
+    padding-left: .5em;
+    width: 20%;
+  }
+  
+  td:nth-child(3) {
+    width: 20%;
+  }
+  
+  td:nth-child(4) {
+    width: 20%;
+  }
+  
+  td:nth-child(5) {
+    width: 40%;
+  }
+  
+  td:last-child {
+    padding-right: 1em;
+  }
+  
+  td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+    
+    
+    /*
+    li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    */
+  }
+  
+  .entity-attr:not(.icon) {
+    margin-left: 20px;
+  }
+}
+
+.entity-attr,
+.entity-location {
+  text-transform: capitalize;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+}
+
+@keyframes flash {
+  from { background: #d9e3e8; }
+  to { background: #f7f7f7; }
+}
+
+.entity {
+  
+  .attributes > li {
+    border-bottom: 1px solid #dadada;
+  }
+  
+  /*
+  .flag-changed {
+    background: #fffcd7;
+    color: #8a7f2b;
+  }
+  */
+  
+  .flag-changed {
+    animation-name: flash;
+    animation-duration: 1s;
+  }
+
+  .flag-new {
+    background: #ddffd7;
+    color: #2b8a45;
+  }
+
+  .flag-delete {
+    background: #ffd7d7;
+    color: #8a2b2b;
+  }
+
+  input[name='attrId'] {
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  
+  button[name='add-attr'] {
+    background: #e5e5e5;
+    
+    &:after {
+      // if you find the right '+' sign, please mail me
+      content: "✕";
+      transform: rotate(45deg);
+      display: inline-block;
+    }
+    
+    &:hover {
+      background: #d9e3e8;
+      color: #333;
+    }
+  }
+  
+  > span {
+    padding: 4px 14px;
+    background: #e5e5e5;
+  }
+  
+  button[name='create-entity'] {
+    background: #d9e3e8;
+    color: #333;
+    
+    &:hover {
+      background: #9eb3be;
+    }
+  }
+  
+  .chart-loading {
+    color: #d3d3d3;
+    margin: 10px;
+    
+    h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+  
+  .chart {
+    width: 90%;
+    margin: 30px;
+    position: relative;
+    
+    canvas {
+      margin-top: 30px;
+      height: 400px
+    }
+  }
+  
+  .chart-select {
+    background: #e5e5e5;
+    font-size: 14px;
+    text-align: center;
+    
+    input {
+      background: inherit;
+      cursor: pointer;
+      
+      &:hover {
+        background: #d9e3e8;
+        color: #333;
+      }
+    }
+    
+    button {
+      float: right;
+      background: transparent;
+    }
+  }
+  
+  .attributes {
+    list-style-type: none;
+    padding-left: 0;
+    background: #f7f7f7;
+    margin: 0;
+    
+    input, button, select {
+      color: inherit;
+      background: inherit;
+    }
+    
+    &:empty:after {
+      content: 'There are no attributes set. Click \'+\' to go down the rabbit hole.';
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      background: #f7f7f7;
+      font-style: italic;
+    }
+  }
+}
+
+.attribute-view {
+  
+  canvas {
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+  }
+}
+
+.value-view {
+  
+  textarea {
+    max-width: 100%;
+    background: inherit;
+    font: inherit;
+    font-family: monospace;
+    border: none;
+    margin: 0;
+    padding: 10px;
+    outline: none;
+  }
+  
+  > span {
+    padding: 4px 14px;
+    background: #e5e5e5;
+  }
+  
+  .map {
+    height: 400px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f1f1f1;
+    border: 10px solid #dbdbdb;
+    overflow: auto;
+    z-index: 1;
+  }
+  
+  .overlay-message {
+    white-space: nowrap;
+    height: 26px;
+    line-height: 26px;
+    box-sizing: content-box;
+    padding: 0 1em;
+    background: #dbdbdb;
+    vertical-align: middle;
+    font-size: 16px;
+    
+    button {
+      border: none;
+      height: 26px;
+      font: inherit;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    [name='do-select'] {
+      background: #d9e3e8;
+      color: #333;
+
+      &:hover {
+        background: #9eb3be;
+        color: #222;
+      }
+    }
+
+    [name='cancel'] {
+      background: inherit;
+      color: inherit;
+      float: right;
+
+      &:hover {
+        background: #d9e3e8;
+        color: #333;
+      }
+    }
+  }
+  
+  .assert {
+    text-align: center;
+  }
+}
+
+.entity-templates-view {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px;
+  
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    margin: 20px;
+    font-size: 22px;
+  }
+  
+  .box {
+    padding: 20px;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: 2px 4px 4px #dadada;
+    }
+  }
+  
+  i, img {
+    font-size: 80px;
+    color: #333;
+  }
+  
+  hr {
+    height: 2px;
+    background: #dadada;
+    border: none;
+    margin: 0 5px;
+  }
+}
+
+///////////////////////////////////////////////////////////
+
+.datepicker {
+  position: absolute;
+  background: #e5e5e5;
+  border: 1px solid #dadada;
+}
+
+.ui-timepicker-wrapper {
+  background: #e5e5e5 !important;
+  border: 1px solid #dadada !important;
+}

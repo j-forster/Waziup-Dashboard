@@ -1,0 +1,84 @@
+
+.home-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px;
+  
+  h1 {
+    margin: 20px;
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  h3 {
+    margin: 20px;
+    font-size: 22px;
+  }
+  
+  .box {
+    padding: 20px;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: 2px 4px 4px #dadada;
+    }
+  }
+  
+  i, img {
+    font-size: 80px;
+    color: #333;
+  }
+}
+
+.login {
+  
+  .relative {
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    background: #f7f7f7;
+    padding: 4px 14px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  [data-security="unsecure"] {
+    color: #c74848;
+  }
+  
+  [data-security="secure"] {
+    color: #1da949;
+  }
+  
+  .waziup img {
+    height: 18px;
+    vertical-align: top;
+    transform: translateY(4px);
+  }
+  
+  .path {
+    color: #6D6D6D;
+  }
+}

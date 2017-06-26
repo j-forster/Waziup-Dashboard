@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/* line 1, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-view {
+  display: flex;
+  flex-direction: column; }
+  /* line 6, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-view .remove-message {
+    white-space: nowrap;
+    height: 26px;
+    line-height: 26px;
+    box-sizing: content-box;
+    padding: 0 1em;
+    background: #ffd7d7;
+    color: #8a2b2b;
+    vertical-align: middle; }
+    /* line 16, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entities-view .remove-message button {
+      border: none;
+      height: 26px;
+      font: inherit;
+      outline: none;
+      cursor: pointer; }
+  /* line 25, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-view .do-remove {
+    background: #ffa5a5;
+    color: #581e1e; }
+    /* line 29, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entities-view .do-remove:hover {
+      background: #e68686;
+      color: #581e1e; }
+  /* line 35, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-view .cancel-remove {
+    background: inherit;
+    color: inherit;
+    float: right; }
+    /* line 40, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entities-view .cancel-remove:hover {
+      background: #ffa5a5;
+      color: #581e1e; }
+
+/* line 51, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list.selecting .head {
+  display: block; }
+
+/* line 56, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list .head {
+  display: none;
+  white-space: nowrap;
+  height: 26px;
+  line-height: 26px;
+  box-sizing: content-box;
+  padding: 0 1em;
+  background: #dbdbdb;
+  vertical-align: middle;
+  font-size: 16px; }
+
+/* line 68, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list[data-select="remove"] .head {
+  background: #ffd7d7;
+  color: #8a2b2b; }
+  /* line 72, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-list[data-select="remove"] .head [name='select'] {
+    background: #ff9797;
+    color: #601e1e; }
+    /* line 76, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entities-list[data-select="remove"] .head [name='select']:hover {
+      background: #fd5050;
+      color: #333; }
+
+/* line 83, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list button {
+  border: none;
+  height: 26px;
+  font: inherit;
+  outline: none;
+  cursor: pointer; }
+
+/* line 91, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list [name='select'] {
+  background: #d9e3e8;
+  color: #333; }
+  /* line 95, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-list [name='select']:hover {
+    background: #9eb3be;
+    color: #222; }
+
+/* line 101, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list [name='cancel'] {
+  background: inherit;
+  color: inherit;
+  float: right; }
+  /* line 106, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entities-list [name='cancel']:hover {
+    background: #d9e3e8;
+    color: #333; }
+
+/* line 112, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:nth-child(1) {
+  padding-left: .7em;
+  padding-right: .7em;
+  background: #f1f1f1;
+  width: 0%;
+  text-align: right;
+  color: #9e9e9e;
+  font-size: 10px;
+  vertical-align: sub; }
+
+/* line 123, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:nth-child(2) {
+  padding-left: .5em;
+  width: 20%; }
+
+/* line 128, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:nth-child(3) {
+  width: 20%; }
+
+/* line 132, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:nth-child(4) {
+  width: 20%; }
+
+/* line 136, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:nth-child(5) {
+  width: 40%; }
+
+/* line 140, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td:last-child {
+  padding-right: 1em; }
+
+/* line 144, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list td {
+  padding-top: .5em;
+  padding-bottom: .5em; }
+
+/* line 149, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /*
+    li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    */ }
+
+/* line 164, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entities-list .entity-attr:not(.icon) {
+  margin-left: 20px; }
+
+/* line 169, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entity-attr,
+.entity-location {
+  text-transform: capitalize;
+  max-width: 400px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden; }
+
+@keyframes flash {
+  from {
+    background: #d9e3e8; }
+  to {
+    background: #f7f7f7; } }
+
+/* line 184, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entity {
+  /*
+  .flag-changed {
+    background: #fffcd7;
+    color: #8a7f2b;
+  }
+  */ }
+  /* line 186, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .attributes > li {
+    border-bottom: 1px solid #dadada; }
+  /* line 197, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .flag-changed {
+    animation-name: flash;
+    animation-duration: 1s; }
+  /* line 202, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .flag-new {
+    background: #ddffd7;
+    color: #2b8a45; }
+  /* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .flag-delete {
+    background: #ffd7d7;
+    color: #8a2b2b; }
+  /* line 212, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity input[name='attrId'] {
+    letter-spacing: 1px;
+    font-weight: bold; }
+  /* line 217, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity button[name='add-attr'] {
+    background: #e5e5e5; }
+    /* line 220, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity button[name='add-attr']:after {
+      content: "✕";
+      transform: rotate(45deg);
+      display: inline-block; }
+    /* line 227, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity button[name='add-attr']:hover {
+      background: #d9e3e8;
+      color: #333; }
+  /* line 233, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity > span {
+    padding: 4px 14px;
+    background: #e5e5e5; }
+  /* line 238, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity button[name='create-entity'] {
+    background: #d9e3e8;
+    color: #333; }
+    /* line 242, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity button[name='create-entity']:hover {
+      background: #9eb3be; }
+  /* line 247, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .chart-loading {
+    color: #d3d3d3;
+    margin: 10px; }
+    /* line 251, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .chart-loading h1 {
+      font-size: 18px;
+      margin: 0; }
+  /* line 257, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .chart {
+    width: 90%;
+    margin: 30px;
+    position: relative; }
+    /* line 262, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .chart canvas {
+      margin-top: 30px;
+      height: 400px; }
+  /* line 268, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .chart-select {
+    background: #e5e5e5;
+    font-size: 14px;
+    text-align: center; }
+    /* line 273, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .chart-select input {
+      background: inherit;
+      cursor: pointer; }
+      /* line 277, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+      .entity .chart-select input:hover {
+        background: #d9e3e8;
+        color: #333; }
+    /* line 283, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .chart-select button {
+      float: right;
+      background: transparent; }
+  /* line 289, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity .attributes {
+    list-style-type: none;
+    padding-left: 0;
+    background: #f7f7f7;
+    margin: 0; }
+    /* line 295, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .attributes input, .entity .attributes button, .entity .attributes select {
+      color: inherit;
+      background: inherit; }
+    /* line 300, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity .attributes:empty:after {
+      content: 'There are no attributes set. Click \'+\' to go down the rabbit hole.';
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      background: #f7f7f7;
+      font-style: italic; }
+
+/* line 313, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.attribute-view canvas {
+  width: 80%;
+  height: 400px;
+  margin: 20px auto; }
+
+/* line 322, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view textarea {
+  max-width: 100%;
+  background: inherit;
+  font: inherit;
+  font-family: monospace;
+  border: none;
+  margin: 0;
+  padding: 10px;
+  outline: none; }
+
+/* line 333, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view > span {
+  padding: 4px 14px;
+  background: #e5e5e5; }
+
+/* line 338, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view .map {
+  height: 400px; }
+
+/* line 342, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f1f1f1;
+  border: 10px solid #dbdbdb;
+  overflow: auto;
+  z-index: 1; }
+
+/* line 354, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view .overlay-message {
+  white-space: nowrap;
+  height: 26px;
+  line-height: 26px;
+  box-sizing: content-box;
+  padding: 0 1em;
+  background: #dbdbdb;
+  vertical-align: middle;
+  font-size: 16px; }
+  /* line 364, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .value-view .overlay-message button {
+    border: none;
+    height: 26px;
+    font: inherit;
+    outline: none;
+    cursor: pointer; }
+  /* line 372, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .value-view .overlay-message [name='do-select'] {
+    background: #d9e3e8;
+    color: #333; }
+    /* line 376, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .value-view .overlay-message [name='do-select']:hover {
+      background: #9eb3be;
+      color: #222; }
+  /* line 382, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .value-view .overlay-message [name='cancel'] {
+    background: inherit;
+    color: inherit;
+    float: right; }
+    /* line 387, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .value-view .overlay-message [name='cancel']:hover {
+      background: #d9e3e8;
+      color: #333; }
+
+/* line 394, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.value-view .assert {
+  text-align: center; }
+
+/* line 399, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.entity-templates-view {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px; }
+  /* line 405, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-size: 40px; }
+  /* line 412, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view h2 {
+    font-size: 20px; }
+  /* line 416, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view h3 {
+    margin: 20px;
+    font-size: 22px; }
+  /* line 421, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view .box {
+    padding: 20px;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer; }
+    /* line 431, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+    .entity-templates-view .box:hover {
+      box-shadow: 2px 4px 4px #dadada; }
+  /* line 436, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view i, .entity-templates-view img {
+    font-size: 80px;
+    color: #333; }
+  /* line 441, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+  .entity-templates-view hr {
+    height: 2px;
+    background: #dadada;
+    border: none;
+    margin: 0 5px; }
+
+/* line 451, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.datepicker {
+  position: absolute;
+  background: #e5e5e5;
+  border: 1px solid #dadada; }
+
+/* line 457, N:/HTW Dresden/ProjSS17/dashboard/www/view/entities/entities.scss */
+.ui-timepicker-wrapper {
+  background: #e5e5e5 !important;
+  border: 1px solid #dadada !important; }
+
+/*# sourceMappingURL=entities.css.map */

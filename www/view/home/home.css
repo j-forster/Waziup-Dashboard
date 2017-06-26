@@ -1,0 +1,76 @@
+/* line 2, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.home-view {
+  display: flex;
+  flex-direction: column; }
+
+/* line 7, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.welcome {
+  width: 60%;
+  min-width: 600px;
+  margin: 40px auto;
+  font-size: 20px; }
+  /* line 13, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+  .welcome h1 {
+    margin: 20px;
+    font-size: 40px; }
+  /* line 18, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+  .welcome h2 {
+    font-size: 20px; }
+  /* line 22, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+  .welcome h3 {
+    margin: 20px;
+    font-size: 22px; }
+  /* line 27, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+  .welcome .box {
+    padding: 20px;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #dadada;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px;
+    cursor: pointer; }
+    /* line 37, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+    .welcome .box:hover {
+      box-shadow: 2px 4px 4px #dadada; }
+  /* line 42, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+  .welcome i, .welcome img {
+    font-size: 80px;
+    color: #333; }
+
+/* line 50, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login .relative {
+  position: relative; }
+
+/* line 54, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  background: #f7f7f7;
+  padding: 4px 14px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+/* line 67, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login [data-security="unsecure"] {
+  color: #c74848; }
+
+/* line 71, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login [data-security="secure"] {
+  color: #1da949; }
+
+/* line 75, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login .waziup img {
+  height: 18px;
+  vertical-align: top;
+  transform: translateY(4px); }
+
+/* line 81, N:/HTW Dresden/ProjSS17/dashboard/www/view/home/home.scss */
+.login .path {
+  color: #6D6D6D; }
+
+/*# sourceMappingURL=home.css.map */

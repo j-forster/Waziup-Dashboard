@@ -1,0 +1,49 @@
+/* line 2, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+._issue148-view {
+  font-size: 14px;
+  flex-grow: 1;
+  overflow: auto;
+  background: #fffbd9;
+  color: #3b3505;
+  position: relative;
+  z-index: -2; }
+  /* line 12, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view:before {
+    content: "build";
+    font-family: 'Material Icons';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 60vh;
+    color: #f5f1d4;
+    z-index: -1; }
+  /* line 24, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view .content {
+    width: 50%;
+    min-width: 500px;
+    padding: 20px;
+    margin: 40px auto; }
+  /* line 31, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view h1 {
+    font-size: 40px; }
+  /* line 35, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view h2 {
+    font-size: 20px;
+    margin: 0 0 20px; }
+  /* line 40, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view h3 {
+    font-size: 22px; }
+  /* line 45, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view .box {
+    padding: 20px;
+    border: 1px solid #797955;
+    margin: 20px 0;
+    cursor: pointer; }
+    /* line 51, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+    ._issue148-view .box:hover {
+      box-shadow: 2px 4px 4px #797955; }
+  /* line 56, N:/HTW Dresden/ProjSS17/dashboard/www/view/_issue148/issue148.scss */
+  ._issue148-view i, ._issue148-view img {
+    font-size: .8em; }
+
+/*# sourceMappingURL=issue148.css.map */

@@ -1,0 +1,59 @@
+
+._issue148-view {
+  
+  font-size: 14px;
+  flex-grow: 1;
+  overflow: auto;
+  background: #fffbd9;
+  color: #3b3505;
+  position: relative;
+  z-index: -2;
+  
+  &:before {
+    content: "build";
+    font-family: 'Material Icons';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 60vh;
+    color: #f5f1d4;
+    z-index: -1;
+  }
+  
+  
+  .content {
+    width: 50%;
+    min-width: 500px;
+    padding: 20px;
+    margin: 40px auto;
+  }
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+  
+  h3 {
+    font-size: 22px;
+  }
+  
+  
+  .box {
+    padding: 20px;
+    border: 1px solid #797955;
+    margin: 20px 0;
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: 2px 4px 4px #797955;
+    }
+  }
+  
+  i, img {
+    font-size: .8em;
+  }
+}

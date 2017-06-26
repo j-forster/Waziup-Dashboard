@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ 
+<html lang="de">
+<head>
+  <title>Hitchhiker Test-Put</title>
+  <meta charset="utf-8">
+  <style>
+    input,
+    textarea {
+      width: 600px;
+      margin-bottom: 10px;
+    }
+    
+    textarea {
+      height: 300px;
+    }
+    
+    button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    URL<br>
+    <input type="text" id="url">
+  </div>
+  <div>
+    Authorization<br>
+    <input type="text" id="username" style="width: 200px">
+    <input type="password" id="password" style="width: 200px">
+  </div>
+  <div>
+    POST Data<br>
+    <textarea id="data">
+{
+  "id": "MySensor2",
+  "type": "SensingDevice",
+  "temperature": {
+    "value": 25,
+    "type": "degree celsius",
+    "history": 4
+  },
+  "location": {
+    "value": "51.035646, 13.736323",
+    "type": "geo",
+    "history": 10
+  }
+}
+    </textarea>
+  </div>
+  <button id="submit">Submit</button>
+  <div>
+    Output<br>
+    <textarea id="output" disabled></textarea>
+  </div>
+  
+  <script>
+    var $ = document.querySelector.bind(document);
+    
+    var port = 8081;
+    var host = location.protocol + "//" + location.host + ":" + port;
+    var path = "/entities";
+
+    $("#url").value = host+path;
+    
+    $("#submit").addEventListener("click", () => {
+      
+      var username = $("#username").value;
+      var password = $("#password").value;
+      
+      var headers = new Headers({
+         "Authorization": "Basic "+btoa(username+":"+password)
+      });
+
+      var init = {
+        method: "POST",
+        headers: headers,
+        body: $("#data").value
+      };
+
+      var request = new Request($("#url").value, init);
+
+      fetch(request).then((response) => {
+
+        var contentType = response.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+
+          return response.json().then((obj) => {
+
+            $("#output").innerText = JSON.stringify(obj, null, 2);
+          });
+        } else {
+          
+          $("#output").innerHTML = "(No JSON / See console!)";
+          console.error(response);
+        }
+      }, (err) => {
+
+        $("#output").innerHTML = "(Error / See console!)";
+        console.error(err);
+      });
+      
+    });
+    
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+ 
+<html lang="de">
+<head>
+  <title>Hitchhiker Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style/shared.css">
+
+  
+</head>
+<body>  
+  <script>
+    document.body.classList.add("platform-"+(
+      navigator.platform.startsWith("Win") ? "windows" : (
+        navigator.platform.startsWith("mac") ? "mac" : "linux")
+    ));
+    
+    var Waziup = {
+      name: "Waziup.io",
+      servicePath: "TEST",
+      fiwareOrion: "http://broker.waziup.io",
+      fiwareOrionV1: "http://broker.waziup.io/v1",
+      fiwareOrionV2: "http://broker.waziup.io/v2",
+      cygnus: "http://historicaldata.waziup.io/STH",
+    }
+    
+  </script>
+  <div id="sidebar">
+    <div class="buttons">
+      <button data-view="home" class="active">Home</button>
+      <button data-view="entities" disabled>Entities</button>
+      <button data-view="subscriptions" disabled>Subscriptions</button>
+      <button data-view="locations" disabled>Locations</button>
+    </div>
+    <div class="inner">
+    </div>
+    <div id="profile" style="display: none">
+      <div class="personal" style="display: none">
+        <i class="material-icons">person_outline</i>
+        <div>
+          <span class="name">Max Mustermann</span><br>
+          <span class="email">max@mustermann.de</span>
+        </div>
+      </div>
+      <button class="logout">Logout</button>
+    </div>
+  </div>
+  <div id="body">
+    <div id="content"></div>
+    <div id="footer">
+      <div class="entity-type-filter">
+        Entity-Filter:
+        <input type="text" value="SensingDevice" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <ul>
+          <li data-value="SensingDevice"><i class="material-icons">devices_other</i></li>
+          <li data-value="Person"><i class="material-icons">perm_identity</i></li>
+          <li data-value="Fence"><i class="material-icons">panorama_horizontal</i></li>
+          <li data-value="Building"><i class="material-icons">home</i></li>
+          <li data-value="Notification"><i class="material-icons">visibility</i></li>
+        </ul>
+      </div>
+      <hr class="vr">
+      <div class="fiwire-servicepath">
+        Fiware-ServicePath:
+        <select>
+          <option></option>
+          <option value="UPPA">UPPA</option>
+          <option value="EGM">EGM</option>
+          <option value="IT21">IT21</option>
+          <option value="CREATENET">CREATENET</option>
+          <option value="CTIC">CTIC</option>
+          <option value="UI">UI</option>
+          <option value="ISPACE">ISPACE</option>
+          <option value="UGB">UGB</option>
+          <option value="WOELAB">WOELAB</option>
+          <option value="FARMERLINE">FARMERLINE</option>
+          <option value="C4A">C4A</option>
+          <option value="PUBD">PUBD</option>
+          <option value="TEST">TEST</option>
+          <option value="#">#</option>
+        </select>
+      </div>
+      
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script> $(".fiwire-servicepath option[value='"+Waziup.servicePath+"']").prop("selected", true); </script>
+  
+  <script src="js/keycloak.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/broker.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/push.min.js"></script>
+  <script src="js/notifications.js"></script>
+  
+  <script src="view/_issue148/_issue148.js"></script>
+  
+  <script src="js/index.js"></script>
+</body>
+</html>
