@@ -7,12 +7,13 @@
   "name": "hi-dashboard",
   "description": "A Waziup.io Dashboard",
   "version": "1.00.0",
-  "main": "lib/dashboard.js",
+  "main": "lib/start.js",
   "engines": {
     "node": "6.9.4"
   },
   "dependencies": {
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "node-sass": "^4.5.3"
   },
   "maintainers": [
     {
@@ -21,7 +22,13 @@
     }
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/npm/npm.git"
-  }
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "scripts": {
+    "start": "node lib/start.js",
+    "build": "node lib/build.js",
+    "postinstall": "node lib/build.js"
+  },
+  "license": "MIT"
 }

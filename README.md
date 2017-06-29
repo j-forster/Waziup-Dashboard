@@ -29,3 +29,15 @@ The dashboard can bring up the following attributes:
 * ![Entity Fence](https://raw.githubusercontent.com/j-forster/Waziup-Dashboard/master/asset/fence.png) Fence
 * ![Entity Building](https://raw.githubusercontent.com/j-forster/Waziup-Dashboard/master/asset/building.png) Building
 * ![Entity Notification](https://raw.githubusercontent.com/j-forster/Waziup-Dashboard/master/asset/notification_entity.png) Notification
+
+## Install
+
+To test the dashboard locally, run the following commands:
+```bash
+$ npm install
+$ npm start
+```
+You will need to have [Node.js](https://nodejs.org/en/) installed on your machine.<br>
+This basically runs a simple http server, presenting the content of the `www` folder.
+
+If you have your own http server already set up, you can link `www` without using Node.js.
