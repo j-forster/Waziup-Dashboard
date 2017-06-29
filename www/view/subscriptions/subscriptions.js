@@ -132,35 +132,6 @@ class SubscriptionsView extends View {
 ///////////////////////////////////////////////////////////
 
 
-function normalTime(time) {
-  
-  var span = $("<span>");
-  
-  if(! time)
-    return span.text("-");
-  
-  var date = time instanceof Date ? time : new Date(Date.parse(time)),
-      now = new Date();
-  
-  span.attr("title", date.toLocaleString());
-  
-  if(now - date < 60*1000)
-    return span.text("just now");
-  
-  if(now - date < 60*60*1000)
-    return span.text(Math.round((now - date)/(60*1000))+" minutes ago");
-  
-  if(now - date < 12*60*60*1000)
-    return span.text(Math.round((now - date)/(60*60*1000))+" hours ago");
-  
-  if(now - date < 14*24*60*60*1000)
-    return span.text(Math.round((now - date)/(24*60*60*1000))+" days ago");
-  
-  return span.text(date.toLocaleString());
-}
-
-//
-
 var Subscription = {
   
   getNotification() {

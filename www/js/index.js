@@ -16,10 +16,12 @@ var app = new class App extends ViewLoader {
     this.username = "";
     
     this.keycloak = Keycloak({
-      url: "http://aam.waziup.io/auth",
-      realm: "waziup",
-      clientId: "waziup"
+      url: Waziup.keycloak.url,
+      realm: Waziup.keycloak.realm,
+      clientId: Waziup.keycloak.clientId
     });
+    
+    this.keycloakAdmin = null;
     
     var waiting = true;
     
@@ -139,6 +141,34 @@ var app = new class App extends ViewLoader {
         if(hash) this.setView(hash, null, false);
       }
     // })
+      
+    //
+    
+    if(Waziup.keycloakAdmin) {
+      
+      fetch(Waziup.keycloakAdmin.url+"/realms/master/protocol/openid-connect/token", {
+        headers: new Headers({
+          "Content-Type": "application/x-www-form-urlencoded"
+        }),
+        method: "POST",
+        body: [
+            "username="+encodeURIComponent(Waziup.keycloakAdmin.username),
+            "password="+encodeURIComponent(Waziup.keycloakAdmin.password),
+            "grant_type=password",
+            "client_id="+encodeURIComponent(Waziup.keycloakAdmin.clientId),
+          ].join("&")
+      }).then(response => {
+        
+        if(response.ok)
+          response.json().then(json => {
+        
+            this.keycloakAdmin = json;
+            json.time = new Date()*1;
+          });
+        else
+          console.error("Waziup KeyCloak Admin given ("+Waziup.keycloakAdmin.url+") but failed to connect.", response);
+      });
+    }
   }
   
   setView(name, cb, tracking=true) {
@@ -195,4 +225,34 @@ var app = new class App extends ViewLoader {
       }
     }
   }
+}
+
+///////////////////////////////////////////////////////////
+
+
+function normalTime(time) {
+  
+  var span = $("<span>");
+  
+  if(! time)
+    return span.text("-");
+  
+  var date = time instanceof Date ? time : new Date(Date.parse(time)),
+      now = new Date();
+  
+  span.attr("title", date.toLocaleString());
+  
+  if(now - date < 60*1000)
+    return span.text("just now");
+  
+  if(now - date < 60*60*1000)
+    return span.text(Math.round((now - date)/(60*1000))+" minutes ago");
+  
+  if(now - date < 12*60*60*1000)
+    return span.text(Math.round((now - date)/(60*60*1000))+" hours ago");
+  
+  if(now - date < 14*24*60*60*1000)
+    return span.text(Math.round((now - date)/(24*60*60*1000))+" days ago");
+  
+  return span.text(date.toLocaleString());
 }

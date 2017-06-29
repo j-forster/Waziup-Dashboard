@@ -1,8 +1,7 @@
-/* line 1, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-view {
   display: flex;
-  flex-direction: column; }
-  /* line 6, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
+  flex-direction: column;
+  max-height: 100%; }
   .subscriptions-view .remove-message {
     white-space: nowrap;
     height: 26px;
@@ -12,35 +11,28 @@
     background: #ffd7d7;
     color: #8a2b2b;
     vertical-align: middle; }
-    /* line 16, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
     .subscriptions-view .remove-message button {
       border: none;
       height: 26px;
       font: inherit;
       outline: none;
       cursor: pointer; }
-  /* line 25, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscriptions-view .do-remove {
     background: #ffa5a5;
     color: #581e1e; }
-    /* line 29, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
     .subscriptions-view .do-remove:hover {
       background: #e68686;
       color: #581e1e; }
-  /* line 35, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscriptions-view .cancel-remove {
     background: inherit;
     color: inherit;
     float: right; }
-    /* line 40, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
     .subscriptions-view .cancel-remove:hover {
       background: #ffa5a5;
       color: #581e1e; }
-  /* line 46, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscriptions-view [name='select-entities'] {
     background: #e5e5e5; }
 
-/* line 54, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:nth-child(1) {
   padding-left: .7em;
   padding-right: .7em;
@@ -51,77 +43,62 @@
   font-size: 10px;
   vertical-align: sub; }
 
-/* line 65, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:nth-child(2) {
   padding-left: .5em;
   width: 20%; }
 
-/* line 70, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:nth-child(3) {
   width: 20%; }
 
-/* line 74, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:nth-child(4) {
   width: 20%; }
 
-/* line 78, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:nth-child(5) {
   width: 40%; }
 
-/* line 82, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td:last-child {
   padding-right: 1em; }
 
-/* line 86, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list td {
   padding-top: .5em;
   padding-bottom: .5em; }
 
-/* line 91, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list ul {
   margin: 0;
   padding-left: 1.5em; }
 
-/* line 96, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list h4 {
   margin: 0;
   font-size: 16px; }
 
-/* line 101, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list hr {
   border: none;
   border-top: 1px solid #dadada;
   width: 80%;
   margin: 8px 0 4px 0; }
 
-/* line 108, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list .entity:hover {
   text-decoration: underline;
   cursor: pointer; }
 
-/* line 113, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list [data-status='active'],
 .subscriptions-list [data-status='inactive'] {
   display: inline-block;
   padding: 2px 12px;
   border-radius: 2px; }
 
-/* line 120, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list [data-status='active'] {
   background: #ddffd7;
   color: #2b8a45;
   border-color: #2b8a45; }
 
-/* line 126, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscriptions-list [data-status='inactive'] {
   color: #6d6d6d;
   background: #dadada; }
 
-/* line 134, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription .notif-cygnus,
 .subscription .notif-http {
   cursor: pointer; }
-  /* line 138, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscription .notif-cygnus:before,
   .subscription .notif-http:before {
     content: 'radio_button_unchecked';
@@ -132,12 +109,10 @@
     height: 20px;
     display: inline-block;
     margin-right: .5em; }
-  /* line 149, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscription .notif-cygnus[checked]:before,
   .subscription .notif-http[checked]:before {
     content: 'radio_button_checked'; }
 
-/* line 155, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription .overlay {
   position: absolute;
   top: 0;
@@ -148,7 +123,6 @@
   border: 10px solid #dbdbdb;
   overflow: auto; }
 
-/* line 166, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription .overlay-message {
   white-space: nowrap;
   height: 26px;
@@ -157,7 +131,6 @@
   padding: 0 1em;
   background: #dbdbdb;
   vertical-align: middle; }
-  /* line 175, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscription .overlay-message button {
     border: none;
     height: 26px;
@@ -165,32 +138,26 @@
     outline: none;
     cursor: pointer; }
 
-/* line 184, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription [name='do-select'] {
   background: #d9e3e8;
   color: #333; }
-  /* line 188, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscription [name='do-select']:hover {
     background: #9eb3be;
     color: #222; }
 
-/* line 194, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription [name='cancel'] {
   background: inherit;
   color: inherit;
   float: right; }
-  /* line 199, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
   .subscription [name='cancel']:hover {
     background: #d9e3e8;
     color: #333; }
 
-/* line 205, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
 
-/* line 211, N:/HTW Dresden/ProjSS17/dashboard/www/view/subscriptions/subscriptions.scss */
 .subscription option:selected {
   background: #d9e3e8;
   color: #333; }

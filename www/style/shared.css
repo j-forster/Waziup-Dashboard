@@ -1,4 +1,3 @@
-/* line 1, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 body {
   background: #fff;
   margin: 0;
@@ -8,58 +7,50 @@ body {
   overflow: hidden;
   display: flex; }
 
-/* line 11, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 h1, h2, h3, h4, h5 {
   font-weight: normal; }
 
-/* line 15, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 html {
   height: 100%; }
 
-/* line 19, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .platform-linux {
   color: #303942;
   font-family: Ubuntu, Arial, sans-serif; }
 
-/* line 24, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .platform-mac {
   color: #303942;
   font-family: '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif; }
 
-/* line 29, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .platform-windows {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-weight: 400;
   color: #222; }
 
-/* line 36, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #body {
   display: flex;
   flex-direction: column;
+  max-height: 100%;
   position: relative;
   flex-grow: 1; }
 
-/* line 44, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 a {
   color: inherit;
   cursor: pointer;
   text-decoration-style: dotted; }
-  /* line 49, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   a.hover {
     text-decoration-style: solid; }
 
-/* line 56, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  max-height: 100%;
+  overflow: auto;
   z-index: 0; }
 
-/* line 63, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .content {
   overflow: auto; }
 
-/* line 69, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #sidebar {
   width: 260px;
   min-width: 260px;
@@ -69,11 +60,9 @@ a {
   box-sizing: border-box;
   display: flex;
   flex-direction: column; }
-  /* line 79, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #sidebar .inner {
     flex-grow: 1;
     overflow: auto; }
-  /* line 86, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #sidebar .buttons button {
     text-align: left;
     font: inherit;
@@ -87,35 +76,27 @@ a {
     padding: .3em 1em;
     font-size: 24px;
     white-space: nowrap; }
-    /* line 101, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .buttons button.active, #sidebar .buttons button:hover:not([disabled]) {
       cursor: pointer;
       color: #333;
       background-color: #e5e5e5; }
-    /* line 110, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .buttons button:hover .close {
       display: block; }
-  /* line 118, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #sidebar .entity {
     display: inline-block; }
-    /* line 121, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .entity i, #sidebar .entity img {
       vertical-align: bottom;
       font-size: 38px;
       margin-right: 10px; }
-    /* line 127, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .entity h3 {
       font-size: 18px;
       line-height: 18px;
       margin: 0; }
-    /* line 133, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .entity h4 {
       font-size: 12px;
       margin: 0; }
-    /* line 138, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .entity div {
       display: inline-block; }
-  /* line 143, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #sidebar .close {
     position: absolute;
     top: 9px;
@@ -126,31 +107,23 @@ a {
     text-align: center;
     line-height: 32px;
     cursor: pointer; }
-    /* line 154, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #sidebar .close:hover {
       background: #d9e3e8;
       color: #333; }
 
-/* line 163, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #profile {
   color: #6d6d6d; }
-  /* line 166, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #profile .personal {
     white-space: nowrap;
     padding: 1em .3em 0 .3em; }
-    /* line 170, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #profile .personal img, #profile .personal i {
       font-size: 3em; }
-    /* line 174, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #profile .personal div {
       display: inline-block; }
-    /* line 178, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #profile .personal .name {
       font-size: 1.2em; }
-    /* line 182, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #profile .personal .email {
       font-size: 0.8em; }
-  /* line 187, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #profile button {
     font: inherit;
     outline: none;
@@ -159,190 +132,156 @@ a {
     background: inherit;
     border: none;
     padding: .3em 1em; }
-    /* line 196, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #profile button:hover {
       color: #333;
       background-color: #e5e5e5; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w0 {
   width: 0%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w5 {
   width: 5%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w10 {
   width: 10%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w15 {
   width: 15%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w20 {
   width: 20%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w25 {
   width: 25%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w30 {
   width: 30%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w35 {
   width: 35%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w40 {
   width: 40%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w45 {
   width: 45%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w50 {
   width: 50%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w55 {
   width: 55%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w60 {
   width: 60%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w65 {
   width: 65%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w70 {
   width: 70%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w75 {
   width: 75%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w80 {
   width: 80%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w85 {
   width: 85%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w90 {
   width: 90%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 207, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w95 {
   width: 95%;
   display: inline-block;
   box-sizing: border-box; }
 
-/* line 214, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .w100 {
   display: block;
   width: 100%;
   box-sizing: border-box; }
 
-/* line 220, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .message {
   width: 600px;
   margin: 40px auto;
   font-size: 1.3em;
   color: #dadada; }
 
-/* line 227, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 ::-webkit-input-placeholder {
   color: #dadada; }
 
-/* line 228, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 ::-moz-placeholder {
   color: #dadada; }
 
-/* line 229, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 :-ms-input-placeholder {
   color: #dadada; }
 
-/* line 230, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 :-moz-placeholder {
   color: #dadada; }
 
-/* line 232, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .modal {
   width: 600px;
   margin: 40px auto;
   border: 1px solid #dadada;
   font-size: 18px; }
-  /* line 238, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal .p,
   .modal p {
     margin: 14px 0 0 0; }
-  /* line 243, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal h2 {
     background: #f1f1f1;
     border-bottom: 1px solid #dadada;
     margin: 0;
     padding: .3em 1em; }
-  /* line 250, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal label {
     box-sizing: border-box;
     display: inline-block;
     padding: 4px 14px;
     background: #e5e5e5; }
-  /* line 257, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal .small {
     font-size: 14px; }
-  /* line 261, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal .error {
     padding: 4px 14px;
     color: #c74848; }
-  /* line 266, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal select,
   .modal input {
     padding: 4px 0;
@@ -353,83 +292,62 @@ a {
     background: #f7f7f7;
     box-sizing: border-box;
     margin: 0; }
-    /* line 277, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .modal select[disabled],
     .modal input[disabled] {
       color: #6D6D6D !important; }
-  /* line 282, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .modal button {
     font: inherit;
     padding: 4px 10px;
     background: #f7f7f7;
     border: none;
     outline: none; }
-    /* line 289, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .modal button[disabled] {
       color: #6D6D6D !important; }
-    /* line 293, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .modal button:not([disabled]) {
       cursor: pointer; }
-      /* line 296, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
       .modal button:not([disabled]):hover {
         background: #d9e3e8;
         color: #333; }
-    /* line 302, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .modal button.primary {
       background: #d9e3e8; }
-      /* line 305, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
       .modal button.primary:not([disabled]) {
         color: #333; }
-        /* line 308, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
         .modal button.primary:not([disabled]):hover {
           background: #9eb3be;
           color: #222; }
-    /* line 315, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .modal button.small {
       padding: 7px 0 6px 0;
       vertical-align: top; }
 
-/* line 326, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 table.normal {
   border-collapse: collapse;
   width: 100%;
   font-size: 14px; }
-  /* line 333, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tbody tr {
     cursor: pointer; }
-    /* line 336, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     table.normal tbody tr:hover {
       background: #d9e3e8;
       color: #333; }
-  /* line 342, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tbody td:first-child {
     border-right: 1px solid #dadada; }
-  /* line 348, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tbody tr:last-child td:first-child {
     border-bottom: 1px solid #dadada; }
-  /* line 356, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tbody[data-select="remove"] tr.selected {
     background: #ffd7d7;
     color: #8a2b2b; }
-  /* line 361, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tbody[data-select="normal"] tr.selected {
     background: #9eb3be;
     color: #222; }
-  /* line 367, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal thead {
     background: #f1f1f1;
     font-weight: 500; }
-    /* line 371, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     table.normal thead td {
       padding-top: 1em;
       border-bottom: 1px solid #dadada; }
-  /* line 377, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal:not(.empty) thead td:first-child {
     border-bottom: none; }
-  /* line 381, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal tr:nth-child(even) {
     background: #f7f7f7; }
-  /* line 385, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   table.normal td:first-child {
     padding-left: 1em;
     padding-left: .5em;
@@ -437,7 +355,6 @@ table.normal {
     background: #f1f1f1;
     width: 0%; }
 
-/* line 397, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #footer {
   border-top: 1px solid #dadada;
   white-space: nowrap;
@@ -447,10 +364,8 @@ table.normal {
   box-sizing: content-box;
   padding: 0 1em;
   text-align: right; }
-  /* line 407, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #footer > div {
     display: inline-block; }
-  /* line 411, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #footer hr.vr {
     display: inline-block;
     width: 0px;
@@ -459,7 +374,6 @@ table.normal {
     border: none;
     border-right: 1px solid #dadada;
     vertical-align: bottom; }
-  /* line 421, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #footer input,
   #footer select {
     background: inherit;
@@ -468,20 +382,16 @@ table.normal {
     outline: none;
     font: inherit;
     padding: 0 3px; }
-    /* line 431, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer input:hover,
     #footer select:hover {
       color: #333;
       background-color: #e5e5e5; }
-    /* line 436, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer input:focus,
     #footer select:focus {
       color: #333;
       background: #d9e3e8; }
-  /* line 442, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   #footer .entity-type-filter {
     position: relative; }
-    /* line 445, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer .entity-type-filter ul {
       display: none;
       position: absolute;
@@ -492,10 +402,8 @@ table.normal {
       border: 1px solid #dadada;
       margin: 0;
       padding: 0; }
-    /* line 457, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer .entity-type-filter:hover ul {
       display: block; }
-    /* line 461, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer .entity-type-filter li {
       padding: 6px;
       width: 34px;
@@ -503,22 +411,18 @@ table.normal {
       box-sizing: border-box;
       display: inline-block;
       cursor: pointer; }
-      /* line 469, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
       #footer .entity-type-filter li:hover {
         color: #333;
         background: #d9e3e8; }
-    /* line 475, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     #footer .entity-type-filter i, #footer .entity-type-filter img {
       font-size: 16px;
       width: 16px;
       height: 16px; }
 
-/* line 483, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .checkbox {
   cursor: pointer;
   display: inline-block;
   user-select: none; }
-  /* line 489, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .checkbox:before {
     content: 'check_box_outline_blank';
     font-family: 'Material Icons';
@@ -529,21 +433,17 @@ table.normal {
     margin-right: .2em;
     font-size: 1.4em;
     color: #444; }
-  /* line 501, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .checkbox[checked]:before {
     content: 'check_box'; }
 
-/* line 508, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .toolbar {
   background: #f1f1f1;
   color: #5a5a5a;
   font-size: 16px;
   border-bottom: 1px solid #dadada; }
-  /* line 514, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .toolbar div {
     vertical-align: top;
     display: inline-block; }
-  /* line 519, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .toolbar button {
     text-align: center;
     padding: 5px;
@@ -554,16 +454,13 @@ table.normal {
     cursor: pointer;
     color: inherit;
     font: inherit; }
-    /* line 530, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .toolbar button i, .toolbar button img {
       font-size: 36px;
       display: inline-block;
       pointer-events: none; }
-    /* line 536, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .toolbar button:hover {
       background: #d9e3e8;
       color: #333; }
-  /* line 542, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .toolbar input[type="text"] {
     background: inherit;
     border: none;
@@ -571,24 +468,19 @@ table.normal {
     font: inherit;
     padding: 5px;
     color: inherit; }
-    /* line 550, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .toolbar input[type="text"]:focus, .toolbar input[type="text"]:hover {
       background-color: #e5e5e5;
       color: #333; }
-  /* line 557, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .toolbar button.inline {
     vertical-align: top;
     height: 31px;
     line-height: 21px; }
-    /* line 562, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .toolbar button.inline i, .toolbar button.inline img {
       font-size: 22px;
       pointer-events: none; }
-    /* line 567, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .toolbar button.inline span {
       vertical-align: text-bottom;
       pointer-events: none; }
-  /* line 573, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .toolbar hr.vr {
     display: inline-block;
     width: 0px;
@@ -604,22 +496,18 @@ table.normal {
   to {
     background: #f7f7f7; } }
 
-/* line 592, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .flash {
   animation-name: flash;
   animation-duration: 1s; }
 
-/* line 597, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .notifications-opener {
   padding: 0 4px;
   cursor: pointer;
   float: left; }
-  /* line 602, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-opener:hover {
     background: #d9e3e8;
     color: #333; }
 
-/* line 608, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .notifications-list {
   padding: 0;
   position: absolute;
@@ -628,18 +516,15 @@ table.normal {
   margin: 0;
   padding: 12px 4px 16px 12px;
   overflow: auto; }
-  /* line 618, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list:not(.attached) {
     pointer-events: none;
     opacity: 0;
     direction: rtl;
     max-height: 90%; }
-    /* line 624, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .notifications-list:not(.attached).visible, .notifications-list:not(.attached):hover {
       opacity: .8;
       transition: .2s;
       pointer-events: all; }
-  /* line 631, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list ul {
     padding: 0;
     direction: ltr;
@@ -650,32 +535,25 @@ table.normal {
     box-shadow: 2px 4px 4px #dadada;
     margin: 0;
     list-style-type: none; }
-    /* line 643, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .notifications-list ul:empty:before {
       content: "Notifications will appear here.";
       margin: 24px;
       font-style: italic;
       display: block; }
-  /* line 651, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list img, .notifications-list i {
     width: 24px;
     float: left;
     margin-right: 4px; }
-  /* line 657, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list li {
     padding: 8px 8px;
     display: block; }
-    /* line 661, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .notifications-list li:not(:first-child) {
       border-top: 1px solid #dadada; }
-  /* line 666, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list h3 {
     margin: 0;
     line-height: 24px; }
-  /* line 671, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list p {
     margin: 0; }
-  /* line 676, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
   .notifications-list.attached {
     left: auto;
     bottom: 27px;
@@ -683,19 +561,16 @@ table.normal {
     margin: 0;
     right: 0;
     top: 0; }
-    /* line 684, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
     .notifications-list.attached ul {
       box-shadow: none;
       border: none;
       border-left: 1px solid #dadada;
       border-radius: 0;
       min-height: 100%; }
-      /* line 691, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
       .notifications-list.attached ul:empty:before {
         padding: 24px;
         margin: 0; }
 
-/* line 699, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 #content.notifications-indent {
   margin-right: 260px; }
 
@@ -705,7 +580,6 @@ table.normal {
   font-weight: 400;
   src: local("Material Icons"), local("MaterialIcons-Regular"), url(../font/MaterialIcons-Regular.woff2) format("woff2"), url(../font/MaterialIcons-Regular.woff) format("woff"), url(../font/MaterialIcons-Regular.ttf) format("truetype"); }
 
-/* line 719, N:/HTW Dresden/ProjSS17/dashboard/www/style/shared.scss */
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;

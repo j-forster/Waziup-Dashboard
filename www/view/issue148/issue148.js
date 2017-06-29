@@ -34,14 +34,10 @@ class _issue148View extends View {
     var boxes = this.$(".box");
     $(boxes[0]).on("click", () => {
       
-      Waziup = {
-        name: "Waziup.io CORS",
-        servicePath: "TEST",
-        fiwareOrion: null,
-        fiwareOrionV1: null,
-        fiwareOrionV2: "http://orion.waziup.io/v1/data",
-        cygnus: "http://historicaldata.waziup.io/STH",
-      }
+      Waziup.name = "Waziup.io CORS";
+      Waziup.fiwareOrion = null;
+      Waziup.fiwareOrionV1 = null;
+      Waziup.fiwareOrionV2 = "http://orion.waziup.io/v1/data";
       
       this.proceed();
     });
