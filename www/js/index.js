@@ -164,9 +164,16 @@ var app = new class App extends ViewLoader {
         
             this.keycloakAdmin = json;
             json.time = new Date()*1;
+            this.emit("keycloakAdmin", json);
           });
-        else
+        else {
+          
           console.error("Waziup KeyCloak Admin given ("+Waziup.keycloakAdmin.url+") but failed to connect.", response);
+          this.emit("keycloakAdmin", null);
+        }
+      }, err => {
+        
+        this.emit("keycloakAdmin", null);
       });
     }
   }
@@ -176,8 +183,11 @@ var app = new class App extends ViewLoader {
     super.setView(name, (view, initial) => {
       
       if(view) {
-        if(tracking) history.pushState(null, name, "#"+name);
-        else location.hash = name;
+
+        if(tracking) {
+          history.pushState(null, name, "#"+name);
+          location.hash = name;
+        }
       }
       if(cb) cb(view, initial);
     });

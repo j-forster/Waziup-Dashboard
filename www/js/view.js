@@ -51,10 +51,11 @@ function createErrorView(message) {
 
 
 
-class ViewLoader {
+class ViewLoader extends Events {
   
   constructor(element, tracking=false) {
     
+    super();
     this.element = element;
     this.tracking = tracking;
     this.current = "";

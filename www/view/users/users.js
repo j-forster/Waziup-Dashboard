@@ -37,6 +37,7 @@ class UsersView extends View {
   load() {
     
     broker.on("change", this.refresh);
+    
     if(this.state !== broker.state)
       this.refresh();
     
@@ -81,6 +82,12 @@ class UsersView extends View {
   }
   
   refresh() {
+    
+    if(! app.keycloakAdmin) {
+      
+      app.once("keycloakAdmin", () => this.refresh());
+      return;
+    }
     
     this.state = broker.state;
     
