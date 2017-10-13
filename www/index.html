@@ -19,9 +19,9 @@
     var Waziup = {
       name: "Waziup.io",
       servicePath: "TEST",
-      fiwareOrion: "http://broker.waziup.io",
-      fiwareOrionV1: "http://broker.waziup.io/v1",
-      fiwareOrionV2: "http://broker.waziup.io/v2",
+      fiwareOrion: "http://orion.waziup.io/api/v1/orion",
+      fiwareOrionV1: "http://orion.waziup.io/api/v1/orion/v1",
+      fiwareOrionV2: "http://orion.waziup.io/api/v1/orion/v2",
       cygnus: "http://historicaldata.waziup.io/STH",
       keycloak: {
         url: "http://aam.waziup.io/auth",
@@ -35,12 +35,6 @@
         password: "KCadminW"
       }
     }
-    
-    // Issue148
-    Waziup.name = "Waziup.io CORS";
-    Waziup.fiwareOrion = null;
-    Waziup.fiwareOrionV1 = null;
-    Waziup.fiwareOrionV2 = "http://orion.waziup.io/v1/data";
     
   </script>
   <div id="sidebar">
